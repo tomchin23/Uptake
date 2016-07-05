@@ -10,6 +10,7 @@ public class Util  {
     public static final String userName = "mngr40884";
     public static final String passWordLocator = "password";
     public static final String passWord = "YdYmanY";
+    public static final String passWord1 = "YdYmanY";
     public static final String submitButtonLocator = "btnLogin";
     public static final String pageTitle = "Guru99 Bank Manager HomePage";
 }
