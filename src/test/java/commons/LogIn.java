@@ -5,6 +5,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
+import resources.Util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,17 +37,15 @@ public class LogIn  {
         driver.findElement(By.name(prop.getProperty("usernameLocator"))).sendKeys(prop.getProperty("userName"));
 
         // Enter Password
+        // driver.findElement(By.name(prop.getProperty("passWordLocator"))).sendKeys(prop.getProperty("passWord"));
+
         driver.findElement(By.name(prop.getProperty("passWordLocator"))).sendKeys(prop.getProperty("passWord"));
 
-       // Click on Submit button.
+        // Click on Submit button.
         driver.findElement(By.name(prop.getProperty("submitButtonLocator"))).click();
 
-        // Take a screenshot
-        //File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-        //FileUtils.copyFile(scrFile, new File(prop.getProperty("screenshotLocation")));
-
-        Base.getScreenShot();
+        // Take screenshot
+        Util.getScreenShot();
 
         // Verify title of the page.
           if (
@@ -56,6 +55,7 @@ public class LogIn  {
         else
             System.out.println("Login Unsuccessful!");
 
-        Base.End();
+        // End session.
+        Util.End();
     }
 }

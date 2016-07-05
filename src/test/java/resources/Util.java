@@ -1,16 +1,30 @@
 package resources;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.io.File;
+import java.io.IOException;
+
 /**
  * Created by HarshenduBhardwaj on 6/30/16.
  */
-public class Util  {
+public class Util {
 
-    public static final String baseUrl = "http://www.demo.guru99.com/V4/";
-    public static final String usernameLocator = "uid";
-    public static final String userName = "mngr40884";
-    public static final String passWordLocator = "password";
-    public static final String passWord = "YdYmanY";
-    public static final String passWord1 = "YdYmanY";
-    public static final String submitButtonLocator = "btnLogin";
-    public static final String pageTitle = "Guru99 Bank Manager HomePage";
+    static WebDriver driver = new FirefoxDriver();
+
+    public static void getScreenShot() throws IOException {
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        FileUtils.copyFile(scrFile, new File("/Users/HarshenduBhardwaj/Desktop/ss/screenshot.png"));
+    }
+
+    public static void End() {
+        driver.close();
+        driver.quit();
+    }
+
 }
