@@ -38,7 +38,7 @@ public class ReadXL {
                 } else if (cell.getCellType() == XSSFCell.CELL_TYPE_NUMERIC) {
                     System.out.println(cell.getNumericCellValue() + " ");
                 } else {
-                    System.out.println("It's all just blanks");
+                    System.out.println("It's all just empty");
                 }
                 System.out.println();
 
