@@ -7,6 +7,8 @@ public class WriteXL {
 
     public static void main(String[] args) {
 
+        System.out.println("Write to Excel");
+
 
     }
 }
