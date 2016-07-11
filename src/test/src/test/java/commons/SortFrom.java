@@ -1,9 +1,9 @@
 package commons;
 
 /**
- * Created by hbhardwa on 7/6/2016.
+ * Created by HARSHENDU on 7/10/16.
  */
-public class WriteXL {
+public class SortFrom {
 
     public static void main(String[] args) {
 
