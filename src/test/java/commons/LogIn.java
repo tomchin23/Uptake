@@ -1,6 +1,6 @@
 package commons;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
@@ -26,7 +26,7 @@ public class LogIn  {
 
         ProfilesIni listProfiles = new ProfilesIni();
         FirefoxProfile profile = listProfiles.getProfile("Automation_Runs");
-        driver = new FirefoxDriver(profile);
+       driver = new FirefoxDriver(profile);
 
         driver.navigate().to(prop.getProperty("baseUrl"));
 

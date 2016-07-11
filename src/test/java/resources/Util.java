@@ -20,11 +20,10 @@ public class Util {
 
     static Random randInt = new Random();
 
-
     public static void getScreenShot() throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-        FileUtils.copyFile(scrFile, new File("/Users/hbhardwa/Desktop/OCA/ScreenShot_" + randInt.nextInt(1000) + ".png"));
+        FileUtils.copyFile(scrFile, new File("/Users/HARSHENDU/Desktop/workspace/ScreenShots/ScreenShot_" + randInt.nextInt(1000) + ".png"));
     }
 
     public static void End() {
