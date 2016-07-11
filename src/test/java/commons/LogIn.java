@@ -11,16 +11,16 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import static resources.Drivers.driver;
+
 /**
  * Created by HarshenduBhardwaj on 6/30/16.
  */
 public class LogIn  {
 
-    static WebDriver driver;
-
     public static void main(String[] args) throws IOException {
 
-        FileInputStream file = new FileInputStream(new File ("/Users/HarshenduBhardwaj/OCA/src/test/java/resources/Objects.properties"));
+        FileInputStream file = new FileInputStream(new File ("C:\\Users\\hbhardwa\\OCA\\src\\test\\java\\resources\\Objects.properties"));
         Properties prop = new Properties();
         prop.load(file);
 
@@ -30,7 +30,7 @@ public class LogIn  {
 
         driver.navigate().to(prop.getProperty("baseUrl"));
 
-        System.out.println("Current page being displaed is " + driver.getCurrentUrl());
+        System.out.println("Current page being displayed is " + driver.getCurrentUrl());
 
         // Enter UserName
         driver.findElement(By.name(prop.getProperty("usernameLocator"))).sendKeys(prop.getProperty("userName"));
@@ -47,7 +47,7 @@ public class LogIn  {
         Util.getScreenShot();
 
         // Verify title of the page.
-        if (
+          if (
                 driver.getTitle().contains(prop.getProperty("pageTitle")))
             System.out.println("Login Successful!");
 

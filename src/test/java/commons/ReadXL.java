@@ -6,6 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
@@ -17,7 +18,7 @@ public class ReadXL {
 
     public static void main(String[] args) throws IOException {
 
-        InputStream ReadXL = new FileInputStream("/Users/HARSHENDU/Desktop/Parameterize.xlsx");
+        InputStream ReadXL = new FileInputStream("C:\\Users\\hbhardwa\\Desktop\\OCA8\\Parameterize.xlsx");
 
         XSSFWorkbook wb = new XSSFWorkbook(ReadXL);
         XSSFSheet sheet = wb.getSheet("Data");
@@ -30,21 +31,30 @@ public class ReadXL {
             row = (XSSFRow) IterateOnRows.next();
 
             Iterator IterateOnCells = row.cellIterator();
-            while (IterateOnCells.hasNext()) {
+
+            while(IterateOnCells.hasNext()) {
                 cell = (XSSFCell) IterateOnCells.next();
 
-                if (cell.getCellType() == XSSFCell.CELL_TYPE_STRING) {
-                    System.out.println(cell.getStringCellValue() + " ");
-                } else if (cell.getCellType() == XSSFCell.CELL_TYPE_NUMERIC) {
-                    System.out.println(cell.getNumericCellValue() + " ");
-                } else {
-                    System.out.println("It's all just empty");
+
+                // Code above here enables the script to read the XL file.
+                // Code below here performs functions on the data read from the XL file.
+
+
+                if(cell.getCellType() ==  XSSFCell.CELL_TYPE_STRING) {
+                    System.out.println(cell.getStringCellValue());
                 }
-                System.out.println();
+                else if (cell.getCellType() == XSSFCell.CELL_TYPE_NUMERIC){
+                        System.out.println(cell.getNumericCellValue());
+                }
+
+                else
+                    System.out.println("No Values Present");
+            }
+
+            System.out.println();
 
             }
         }
     }
-}
 
 
