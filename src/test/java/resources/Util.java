@@ -23,7 +23,7 @@ public class Util {
     public static void getScreenShot() throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-        FileUtils.copyFile(scrFile, new File("/Users/HARSHENDU/Desktop/workspace/ScreenShots/ScreenShot_" + randInt.nextInt(1000) + ".png"));
+        FileUtils.copyFile(scrFile, new File("C:\\Users\\hbhardwa\\Desktop\\OCA8\\ScreenShots\\ScreenShot_" + randInt.nextInt(1000) + ".png"));
     }
 
     public static void End() {

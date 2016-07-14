@@ -36,8 +36,6 @@ public class LogIn  {
         driver.findElement(By.name(prop.getProperty("usernameLocator"))).sendKeys(prop.getProperty("userName"));
 
         // Enter Password
-        // driver.findElement(By.name(prop.getProperty("passWordLocator"))).sendKeys(prop.getProperty("passWord"));
-
         driver.findElement(By.name(prop.getProperty("passWordLocator"))).sendKeys(prop.getProperty("passWord"));
 
         // Click on Submit button.
