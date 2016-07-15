@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Simple Reporter Suite">
+    <listeners>
+        <listener class-name="commons.Cart_Check" />
+    </listeners>
+
+    <test name="Simple Reporter test">
+        <classes>
+            <class name="SampleTest" />
+        </classes>
+    </test>
+</suite>

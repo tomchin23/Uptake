@@ -66,8 +66,6 @@ public class Cart_Check {
         String errorMsg = "EMPTY CART";
         String getErrorMsg = driver.findElement(By.xpath(prop3.getProperty("emptyCartMsgXpath"))).getText();
 
-
-
         if (errorMsg.equals(getErrorMsg)){
             System.out.println("Cart is empty");
         }else
