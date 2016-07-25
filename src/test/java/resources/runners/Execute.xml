@@ -6,7 +6,7 @@
 
     <test name="Simple Reporter test">
         <classes>
-            <class name="SampleTest" />
+            <class name="SampleTe" />
         </classes>
     </test>
 </suite>

@@ -27,7 +27,8 @@ public class WebTables {
                     System.out.print(columns.get(colNum).getText() + " ");
                 }
                 System.out.println(" ");
-            }
+            }        WebElement el = driver.findElement(By.xpath("//div[@class='data-tables first']/div/table/tbody/tr"));
+
         driver.close();
         driver.quit();
         }
