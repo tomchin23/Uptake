@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite">
+        <parameter name="" value=""> </parameter>
+        <parameter name="" value=""> </parameter>
+        <parameter name="" value=""> </parameter>
+
+        <test name="">
+                <classes>
+                        <class name="commons.Params"/>
+                </classes>
+        </test>
+        </suite>
+
+
+
